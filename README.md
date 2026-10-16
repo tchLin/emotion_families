@@ -6,19 +6,20 @@ The families are **Happy, Confident, Calm, Sad, Fear, Anger, Love, and Surprise*
 
 ## Using the glossary
 
-- Open **Glossary** to search for a feeling word or filter by family.
+- Open **Glossary** to search for a feeling word or filter by family. Select any word to read its dictionary definition and source.
 - Use the family list to explore related words during a conversation.
 - Open **Practice** for a randomized round of 10, 20, or all words.
+- Use **Learn this word** to reveal a definition during practice. Definitions also open after answering or skipping a word.
 - Review the families shown after each answer, then revisit missed words at the end of the round.
 - Use keyboard shortcuts **1–8** to choose a family and **Enter** to continue when focus is outside a form control.
 
-The glossary groups words by family; it does not currently provide dictionary definitions. Some words belong to more than one family, and the chart is a starting point for discussion.
+The glossary includes a sourced dictionary definition for every distinct word. Some words belong to more than one family, and the chart is a starting point for discussion.
 
 ## Website
 
 [Open Feeling Words](https://tchlin.github.io/emotion_families/) · [Open the glossary](https://tchlin.github.io/emotion_families/#library)
 
-The website is configured for GitHub Pages at the links above. Complete the one-time Pages setup below to enable publication. After setup, each push to `main` checks and deploys the contents of `dist/`.
+The website is hosted on GitHub Pages. Each push to `main` checks and deploys the contents of `dist/`. Forks can use the one-time Pages setup below.
 
 ## Run locally
 
@@ -63,6 +64,18 @@ Word lists provided by [Kids Mental Health Tools](https://www.kidsmentalhealthto
 
 The vocabulary and original grouping were transcribed from the user-provided Kids Mental Health Tools feelings chart. The original chart image is not bundled in this repository. The website preserves its central reminder: feelings can belong to more than one emotional family, and there is no one “right” way to feel.
 
+## Dictionary definitions
+
+[`dist/definitions.json`](dist/definitions.json) contains 211 selected definitions, one for every distinct feeling word. The site serves this file alongside the vocabulary, so looking up a word does not require a live dictionary API request.
+
+Definitions come from **Princeton WordNet 3.0** and **English Wiktionary contributors**, with an emotion-relevant sense chosen for ambiguous words such as *blue*, *warm*, and *present*. The interface calls them dictionary definitions: there is no single official dictionary standard for feelings. A definition of a base verb is explicitly identified when used for an inflected chart term (for example, *soothe* for *soothed*).
+
+Each entry records its source, part of speech, lookup term, source URL, and license. WordNet entries also record the synset ID. Source wording is retained; examples and formatting are omitted, and the *fed up* and *spooked* entries use the first definition sentence.
+
+WordNet excerpts retain the [WordNet license](dist/wordnet-license.txt). Wiktionary excerpts are attributed and distributed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). See the website's [dictionary sources and license notices](dist/dictionary-sources.html). These content licenses apply to the respective dictionary excerpts, not automatically to unrelated application code or the original emotion chart.
+
+When changing the vocabulary, add or update the matching lowercase key in `definitions.json`. Preserve source attribution and choose the sense intentionally; do not automatically take the first dictionary meaning. Coverage and source-metadata tests catch missing entries.
+
 ## Project structure
 
 ```text
@@ -70,10 +83,15 @@ dist/
   index.html       Page structure and metadata
   styles.css       Responsive layout and family colors
   emotions.json    Vocabulary and family memberships
+  definitions.json Sourced definitions for every distinct word
+  definitions.js   Safe definition rendering
+  dictionary-sources.html  Attribution and license notices
+  wordnet-license.txt      WordNet license
   quiz.js          Word indexing, answer matching, randomization
   app.js           Quiz and glossary interactions
 tests/
   quiz.test.mjs    Vocabulary and quiz logic checks
+  definitions.test.mjs  Coverage, citations, and rendering checks
 .github/workflows/
   pages.yml        Checks and deploys the website to GitHub Pages
 ```
@@ -89,7 +107,7 @@ npm test
 node --check dist/app.js
 ```
 
-Tests cover the eight families, duplicate handling, acceptance of overlapping families, and randomization without losing or duplicating questions. Browser interaction and visual testing are separate from these checks.
+Tests cover the eight families, duplicate handling, acceptance of overlapping families, randomization, complete definition coverage, source metadata, selected emotional senses, and safe definition rendering. Browser interaction and visual testing are separate from these checks.
 
 ## Hosting with GitHub Pages
 
