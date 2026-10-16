@@ -16,9 +16,9 @@ The glossary groups words by family; it does not currently provide dictionary de
 
 ## Website
 
-[Open Feeling Words](https://emotion-families-practice.socialgleam9.chatgpt.site) · [Open the glossary](https://emotion-families-practice.socialgleam9.chatgpt.site/#library)
+[Open Feeling Words](https://tchlin.github.io/emotion_families/) · [Open the glossary](https://tchlin.github.io/emotion_families/#library)
 
-The current Sites deployment is private to its owner. Repository access and website access are separate; a GitHub clone can be served locally or deployed to another static host.
+The website is configured for GitHub Pages at the links above. Complete the one-time Pages setup below to enable publication. After setup, each push to `main` checks and deploys the contents of `dist/`.
 
 ## Run locally
 
@@ -74,8 +74,8 @@ dist/
   app.js           Quiz and glossary interactions
 tests/
   quiz.test.mjs    Vocabulary and quiz logic checks
-.openai/
-  hosting.json     Existing Sites deployment configuration
+.github/workflows/
+  pages.yml        Checks and deploys the website to GitHub Pages
 ```
 
 The site uses plain HTML, CSS, and JavaScript. There is no application backend or database. Quiz answers remain in page memory and reset on refresh; the application includes no client records or analytics. Fonts load from Google Fonts, with system fallbacks.
@@ -91,8 +91,17 @@ node --check dist/app.js
 
 Tests cover the eight families, duplicate handling, acceptance of overlapping families, and randomization without losing or duplicating questions. Browser interaction and visual testing are separate from these checks.
 
-## Hosting
+## Hosting with GitHub Pages
 
-Deploy the contents of `dist/` to any static web host. Keep `index.html`, the JavaScript and CSS files, and `emotions.json` together. Deep links use URL fragments (`#library` and `#quiz`), so no server routing rules are needed.
+The [deployment workflow](.github/workflows/pages.yml) publishes `dist/` directly to GitHub Pages. No build step, external hosting service, or deployment secret is needed.
 
-`.openai/hosting.json` identifies the existing private Sites project. Configure your own project identity if deploying a fork with Sites.
+### One-time repository setup
+
+1. Open [Settings → Pages](https://github.com/tchLin/emotion_families/settings/pages).
+2. Under **Build and deployment → Source**, choose **GitHub Actions**.
+3. Open [Deploy to GitHub Pages](https://github.com/tchLin/emotion_families/actions/workflows/pages.yml), click **Run workflow**, and choose `main`.
+4. Wait for the deployment to succeed, then open **https://tchlin.github.io/emotion_families/**.
+
+Subsequent pushes to `main` deploy automatically after the quiz tests and JavaScript syntax checks pass. GitHub's [publishing-source documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) describes the repository setting.
+
+All assets use relative paths so the site works under the `/emotion_families/` project path. Deep links use URL fragments (`#library` and `#quiz`), so no server routing rules are needed. The same `dist/` folder can also be served locally.
