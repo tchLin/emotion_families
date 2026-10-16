@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f7f6ef"><meta name="description" content="Get to know your feeling words. A gentle, interactive quiz across eight emotion families, with a searchable word library.">
-<title>Feeling Words · Emotion families</title><link rel="stylesheet" href="styles.css">
+<meta name="theme-color" content="#f7f6ef"><meta name="description" content="A glossary helper for therapists: explore 211 feeling words across eight emotion families, search the word library, and practice with gentle quizzes.">
+<title>Feeling Words · A glossary helper for therapists</title><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="header"><a class="brand" href="./" aria-label="Feeling Words home"><span class="brand-mark" aria-hidden="true">✳</span> feeling words<span class="brand-period">.</span></a><nav aria-label="Main navigation"><button class="nav-button active" id="quiz-tab" aria-current="page">Practice</button><button class="nav-button" id="library-tab">Word library <span>↗</span></button></nav></header>
+<header class="header"><a class="brand" href="./" aria-label="Feeling Words home"><span class="brand-mark" aria-hidden="true">✳</span> feeling words<span class="brand-period">.</span></a><nav aria-label="Main navigation"><button class="nav-button active" id="quiz-tab" aria-current="page">Practice</button><button class="nav-button" id="library-tab">Glossary <span>↗</span></button></nav></header>
 <main>
-<section class="intro"><div><p class="eyebrow"><span></span> A LITTLE PRACTICE IN SELF-UNDERSTANDING</p><h1>Every feeling has a family.</h1><p class="intro-copy">Find the connections. Build your emotional vocabulary.<br>A few words at a time.</p></div><div class="flower" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><b>☺</b></div></section>
+<section class="intro"><div><p class="eyebrow"><span></span> AN EMOTION GLOSSARY FOR THERAPISTS</p><h1>Every feeling has a family.</h1><p class="intro-copy">Explore feeling words together. Make room for conversation.<br>A glossary and gentle practice tool for therapists and clients.</p></div><div class="flower" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><b>☺</b></div></section>
 <div class="workspace"><section class="main-panel" aria-label="Practice area"><div id="quiz-view"><div class="panel-top"><span class="section-label">THE DAILY PRACTICE <span class="small-dot"></span> AT YOUR PACE</span><label class="length-label">Round <select id="round-length"><option value="10">10 words</option><option value="20">20 words</option><option value="all">All words</option></select></label></div><div id="quiz-content"><p>Gathering your feeling words…</p></div></div><div id="library-view" hidden><div class="library-head"><div><p class="eyebrow">EXPLORE THE CHART</p><h2>Your feeling-word library</h2></div><span id="word-count" class="count-pill"></span></div><label class="sr-only" for="search">Search feeling words</label><input type="search" id="search" placeholder="Find a feeling…" autocomplete="off"><div id="library-filters" class="filters" aria-label="Filter by family"></div><div id="library-content"></div></div></section>
 <aside><div class="aside-heading"><span class="eyebrow">MEET THE FAMILIES</span><span class="count-pill">08</span></div><p class="aside-copy">Different shades of being human.</p><div id="family-list"></div><div class="note"><span aria-hidden="true">✳</span><h3>Room for more than one.</h3><p>A feeling can belong to several families. Choose any family listed for that word on the chart.</p><p>There’s no one “right” way to feel.</p></div></aside></div>
-<footer><span>Feel it. Name it. Get to know it.</span><span>Words from your emotion families chart <span aria-hidden="true">↗</span></span></footer>
+<footer><span>Feel it. Name it. Get to know it.</span><span>Vocabulary from Kids Mental Health Tools <span aria-hidden="true">↗</span></span></footer>
 </main><script type="module" src="app.js"></script>
 </body></html>

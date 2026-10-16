@@ -1,1 +1,22 @@
-{"name":"feeling-words","version":"1.0.0","private":true,"type":"module","scripts":{"start":"python3 -m http.server 5173 --directory dist","test":"node --test tests/*.test.mjs"}}
+{
+  "name": "feeling-words",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 5173 --directory dist",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "description": "A therapist-friendly emotion vocabulary glossary and quiz with 211 feeling words across eight emotion families.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tchLin/emotion_families.git"
+  },
+  "keywords": [
+    "emotion-families",
+    "emotional-vocabulary",
+    "glossary",
+    "therapists",
+    "quiz"
+  ]
+}

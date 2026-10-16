@@ -7,6 +7,7 @@ const familyNames = word => word.families.map(familyName).join(' · ');
 function dot(f) { return `<span class="family-dot" style="--color:${f.color}" aria-hidden="true"></span>`; }
 function switchView(next) {
   view = next;
+  if (location.hash !== `#${next}`) history.replaceState(null, '', `#${next}`);
   $('quiz-view').hidden = next !== 'quiz'; $('library-view').hidden = next !== 'library';
   for (const [id, value] of [['quiz-tab', 'quiz'], ['library-tab', 'library']]) {
     $(id).classList.toggle('active', next === value);
@@ -70,7 +71,10 @@ async function init() {
       if (/^[1-8]$/.test(e.key) && selected === null && index < round.length) { e.preventDefault(); answer(data.families[Number(e.key)-1].id); }
       if (e.key === 'Enter' && selected !== null && $('next')) { e.preventDefault(); $('next').click(); }
     });
+    const initialView = location.hash === '#library' ? 'library' : 'quiz';
     start();
+    if (initialView === 'library') switchView('library');
+    window.addEventListener('hashchange', () => switchView(location.hash === '#library' ? 'library' : 'quiz'));
   } catch (error) { $('quiz-content').innerHTML = '<p class="empty">The word list couldn’t load. Please refresh the page. For local use, run <code>npm start</code> and open http://localhost:5173.</p>'; console.error(error); }
 }
 init();
