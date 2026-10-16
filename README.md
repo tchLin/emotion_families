@@ -57,7 +57,11 @@ Each family has an `id`, `name`, `color`, and `terms` array:
 
 Edit this file to adjust the vocabulary or family memberships, then run the tests. Keep family IDs unique and consistent with the eight-family interface.
 
-The vocabulary and original grouping were transcribed from the user-provided **Kids Mental Health Tools** feelings chart, credited in the image as `www.kidsmentalhealthtools.com`. The original chart image is not bundled in this repository. The website preserves its central reminder: feelings can belong to more than one emotional family, and there is no one “right” way to feel.
+### Word list attribution
+
+Word lists provided by [Kids Mental Health Tools](https://www.kidsmentalhealthtools.com/). Thank you for providing the emotion vocabulary used in this glossary and quiz.
+
+The vocabulary and original grouping were transcribed from the user-provided Kids Mental Health Tools feelings chart. The original chart image is not bundled in this repository. The website preserves its central reminder: feelings can belong to more than one emotional family, and there is no one “right” way to feel.
 
 ## Project structure
 

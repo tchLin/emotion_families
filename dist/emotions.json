@@ -1,6 +1,7 @@
 {
   "title": "Emotion families",
-  "source": "Transcribed from the user-provided Kids Mental Health Tools feelings chart.",
+  "source": "Word lists provided by Kids Mental Health Tools; transcribed from the user-provided feelings chart.",
+  "source_url": "https://www.kidsmentalhealthtools.com/",
   "note": "Feelings can belong to more than one emotional family. There is no one right way to feel. Quiz answers reflect this chart, not a judgment about your feelings.",
   "families": [
     {"id":"happy","name":"Happy","color":"#e7b847","terms":["Adaptable","Amazed","Amused","Awe","Bliss","Bubbly","Cheerful","Delighted","Eager","Ecstatic","Elated","Enchanted","Energized","Enthusiastic","Excited","Exhilaration","Exuberant","Friendly","Glad","Giggly","Gleeful","Goofy","Jubilant","Joyful","Lively","Peppy","Pleased","Pumped","Radiant","Relieved","Satisfied","Sparkly","Sunny","Thrilled","Tickled","Upbeat","Vibrant"]},
