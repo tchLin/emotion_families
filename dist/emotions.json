@@ -1,0 +1,15 @@
+{
+  "title": "Emotion families",
+  "source": "Transcribed from the user-provided Kids Mental Health Tools feelings chart.",
+  "note": "Feelings can belong to more than one emotional family. There is no one right way to feel. Quiz answers reflect this chart, not a judgment about your feelings.",
+  "families": [
+    {"id":"happy","name":"Happy","color":"#e7b847","terms":["Adaptable","Amazed","Amused","Awe","Bliss","Bubbly","Cheerful","Delighted","Eager","Ecstatic","Elated","Enchanted","Energized","Enthusiastic","Excited","Exhilaration","Exuberant","Friendly","Glad","Giggly","Gleeful","Goofy","Jubilant","Joyful","Lively","Peppy","Pleased","Pumped","Radiant","Relieved","Satisfied","Sparkly","Sunny","Thrilled","Tickled","Upbeat","Vibrant"]},
+    {"id":"confident","name":"Confident","color":"#df9661","terms":["Adventurous","Appreciative","Assured","Aware","Balanced","Bold","Certain","Competent","Composed","Courageous","Daring","Eager","Encouraged","Fearless","Focused","Independent","Inspired","Poised","Ready","Skilled","Steady","Strong","Sure","Tenacious","Tough","Trusted","Valued","Willing"]},
+    {"id":"calm","name":"Calm","color":"#91a77a","terms":["At ease","Balanced","Calm","Carefree","Composed","Cozy","Easygoing","Fine","Fulfilled","Gentle","Light","Mellow","Okay","Patient","Present","Quiet","Reassured","Restored","Safe","Secure","Serene","Settled","Soothed","Steady","Still","Tranquil","Unbothered","Untroubled","Warm","Zen"]},
+    {"id":"sad","name":"Sad","color":"#83a9c6","terms":["Blue","Bummed out","Crying","Crushed","Dejected","Devastated","Discouraged","Down","Exhausted","Guilty","Gloomy","Homesick","Hurt","Inferior","Isolated","Left out","Let down","Miserable","Missing","Moody","Mopey","Tearful","Tired","Unhappy","Weepy","Withdrawn"]},
+    {"id":"fear","name":"Fear","color":"#aa94b7","terms":["Alarmed","Apprehensive","Ashamed","Awkward","Cautious","Creeped out","Dread","Embarrassed","Fearful","Freaked out","Frightened","Helpless","Hesitant","Horror","Intimidated","Jittery","Jumpy","Overstimulated","Overwhelmed","Shaky","Shy","Spooked","Startled","Timid","Uneasy","Uncertain","Unsettled","Unsure","Unsafe","Wary","Watchful"]},
+    {"id":"anger","name":"Anger","color":"#d87e71","terms":["Agitated","Angry","Bitter","Contempt","Critical","Crabby","Cranky","Distant","Defensive","Dislike","Disrespected","Fed up","Furious","Grumpy","Grouchy","Heated","Hostile","Hurt","Mad","Offended","Out of control","Overloaded","Overwhelmed","Powerless","Provoked","Resentful","Sarcastic","Stuck","Sulky","Upset","Unheard","Wronged"]},
+    {"id":"love","name":"Love","color":"#d997ab","terms":["Adored","Admired","Affectionate","Appreciated","Attached","Attentive","Bonded","Cherished","Comforted","Cuddly","Friendly","Gentle","Helpful","Included","Loved","Nostalgia","Nurtured","Playful","Protected","Secure","Sharing","Snuggly","Special","Sympathy","Thankful","Treasured","Valued","Warm","Wanted","Welcomed"]},
+    {"id":"surprise","name":"Surprise","color":"#6cb7b6","terms":["Astonished","Bewildered","Delighted","Expectant","Flabbergasted","Interested","Puzzled","Stunned","Speechless"]}
+  ]
+}
